@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langchain RAG Application with Web-Scraped Data</title>
+</head>
+<body>
+    <h1>Langchain RAG Application with Web-Scraped Data</h1>
+    <h1>----------------------------------------------------------------------</h1>
+    <h1>Please enter the URL and your Query here: </h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        url : <input type="text" name="url" required><br>
+        query : <input type="text" name="query" required><br>
+        <h1>                                             </h1>
+        <input type="submit">
+    </form>
+    <hr>
+    {% if answer %}
+    
+        <h2>Your Query: {{query}}</h2>
+        <h2>Answer: {{answer}}</h2>
+    {% endif %}
+    
+</body>
+</html>
